@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/vehicle', 'VehicleController@index');
+Route::get('/vehicle/create', 'VehicleController@create');
+Route::post('/vehicle', 'VehicleController@store');
+Route::get('/vehicle/{id}', 'VehicleController@show');
+Route::get('/vehicle/{id}/edit', 'VehicleController@edit');
+Route::put('/vehicle/{id}', 'VehicleController@update');
+Route::delete('/vehicle/{id}', 'VehicleController@destroy');
