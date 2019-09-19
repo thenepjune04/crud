@@ -22,3 +22,33 @@ Route::get('/vehicle/{id}', 'VehicleController@show');
 Route::get('/vehicle/{id}/edit', 'VehicleController@edit');
 Route::put('/vehicle/{id}', 'VehicleController@update');
 Route::delete('/vehicle/{id}', 'VehicleController@destroy');
+
+Route::get('/buffet', 'BuffetController@index');
+Route::get('/buffet/create', 'BuffetController@create');
+Route::post('/buffet', 'BuffetController@store');
+Route::get('/buffet/{id}', 'BuffetController@show');
+Route::get('/buffet/{id}/edit', 'BuffetController@edit');
+Route::put('/buffet/{id}', 'BuffetController@update');
+Route::delete('/buffet/{id}', 'BuffetController@destroy');
+Route::resource('post', 'PostController');
+Route::resource('buffet', 'buffetController');
+Route::resource('newbuffet', 'newbuffetController');
+
+Route::middleware(['auth', 'role:admin'])->group(function () {
+    Route::get("/teacher" , function (){
+	    return view("teacher/index");
+    });
+});
+
+
+
+Route::get("/student" , function (){
+	return view("student/index");
+});
+Route::get('/table', function () {
+    return view('table');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

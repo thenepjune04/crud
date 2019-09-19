@@ -19,7 +19,6 @@ class CreateStudents2Table extends Migration
             $table->integer('hour');
             $table->string('grade');
             $table->float('gpa');
-
             $table->timestamps();
         });
     }

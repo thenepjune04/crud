@@ -1,0 +1,17 @@
+{
+    "fields": [
+        {
+            "name": "NameBuffe",
+            "type": "string"
+        },
+        {
+            "name": "position",
+            "type": "text"
+        },
+        {
+            "name": "price",
+            "type": "text"
+        
+        }
+    ]
+}
