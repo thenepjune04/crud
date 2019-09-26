@@ -16,6 +16,7 @@
             <th>Series</th>
             <th>Colour</th>
             <th>Actions</th>
+            <th>Owner</th>
         </tr>
     </thead>
     <tbody>
@@ -26,6 +27,7 @@
             <td>{{ $vehicle->series }}</td>
             <td>{{ $vehicle->colour }}</td>
             <td>{{ $vehicle->mileage }}</td>
+            <td>{{ $vehicle->user->name }}</td>
             <td>
                 <a href="{{ url('/') }}/vehicle/{{ $vehicle->id }}"  ><button class="btn btn-info btn-sm"> View</button></a>
                 <a href="{{ url('/') }}/vehicle/{{ $vehicle->id }}/edit"  ><button class="btn btn-primary btn-sm"> Edit</button></a>

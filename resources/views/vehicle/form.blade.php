@@ -1,3 +1,4 @@
+
 <div >
     <label  >{{ 'Brand' }}</label>
     <input  name="brand" type="text"  value="{{ isset($vehicle->brand) ? $vehicle->brand : ''}}" >
