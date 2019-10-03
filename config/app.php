@@ -175,6 +175,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //Add this line of code
+        Barryvdh\DomPDF\ServiceProvider::class,
+
     ],
 
     /*
@@ -227,6 +230,10 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'HTML' => Collective\Html\HtmlFacade::class,
+
+        //Add this line of code
+        'PDF' => Barryvdh\DomPDF\Facade::class,
     ],
+
 
 ];
